@@ -82,7 +82,10 @@ export default {
     font-size: 12pt;
   }
   .footer{
-    position: relative;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     padding:10px;
     background: #eef9ee;
   }
