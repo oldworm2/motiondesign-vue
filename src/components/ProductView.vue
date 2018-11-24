@@ -43,8 +43,9 @@
 
 <script>
 import ProductBaseInfo from './ProductBaseInfo';
-import Curtains from './Curtains'
-import MessageBox from './MessageBox'
+import Curtains from './Curtains';
+import MessageBox from './MessageBox';
+import 'whatwg-fetch';
 
 export default {
   name: 'ProductView',
