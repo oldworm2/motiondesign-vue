@@ -1,28 +1,134 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="app">
+    <nav class="navbar navbar-light bg-light">
+      <h1>Curtain Co.</h1>
+      <span class="navbar-text">
+        Welcome, {{this.user}} <i class="fas fa-user"></i>
+      </span>
+    </nav>
+    <main class="p-4">
+      <ProductView />
+    </main>
+    <footer class="footer">
+      <div class="text-center">
+        <small>Version 1.0.0</small>
+        <div class="motion_logo">
+          <a href="https://motiondesign.nz/">
+            <img
+              src="https://motiondesign.nz/wp-content/themes/MD/img/logo@2x.png"
+              height="15"
+              alt="MotionDesign"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ProductView from './components/ProductView'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
-  }
+    ProductView
+  },
+  data: () => ({
+    user: '',
+  }),
+  mounted() {
+    localStorage.setItem("user", "Clark");
+    this.user = localStorage.getItem("user");
+    
+  },
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  .app {
+    text-align: center;
+  }
+
+  .app-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+  }
+
+  .app-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  .app-link {
+    color: #61dafb;
+  }
+
+  @keyframes app-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .app .navbar{
+    padding-left:35px;
+    padding-right:35px;
+  }
+
+  .app .tableArea{
+    margin-left:0;
+    margin-right:0;
+  }
+  h1{
+    font-size:20px;
+    line-height: 24px;
+  }
+
+  .title{
+    font-weight: bold;
+  }
+  h3.title{
+    margin-top:30px;
+  }
+  .table th{
+    font-size:1.2em;
+  }
+  .table td{
+    font-size:1.1em;
+  }
+  .navbar-text{
+    font-weight: bold; 
+    font-size: 12pt;
+  }
+  .footer{
+    position: relative;
+    padding:10px;
+    background: #eef9ee;
+  }
+  .motion_logo{
+    position: absolute;
+    top:10px;
+    right:10px;
+  }
+  @media screen and (max-width:480px){
+    small{
+      display:block;
+      text-align:center;
+      margin:0 auto;
+    }
+    .motion_logo{
+      position: static;
+      display:block;
+      margin:10px auto;
+    }
+  }
 </style>
