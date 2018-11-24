@@ -4,7 +4,7 @@
       <h4 class="text-left title">Curtains</h4>
     </div>
 
-    <div class="row tableArea">
+    <div class="row table-area">
       <table class="table table-hover ">
         <thead>
           <tr class="table-success">
