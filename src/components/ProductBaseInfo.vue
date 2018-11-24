@@ -40,7 +40,7 @@
       <div class="form-group">
         <select
           v-model="product.colour"
-          onChange=""
+          v-on:keydown.tab.exact="(0 === product.curtains.length) && addCurtain()"
           class="form-control"
           id="colour"
           v-bind:style="selectedColourStyle"
@@ -72,7 +72,8 @@ export default {
     suburbs: Array,
     materials: Array,
     colours: Array,
-    selectedColourStyle: Object
+    selectedColourStyle: Object,
+    addCurtain: Function
   }
 }
 </script>

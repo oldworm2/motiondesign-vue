@@ -4,10 +4,10 @@ motiondesign-vue
 ## Project setup
 ### Init
 ```
-yarn install
+yarn or yarn install
 ```
 
 ### Start
 ```
-yarn run serve
+yarn serve or yarn run serve
 ```

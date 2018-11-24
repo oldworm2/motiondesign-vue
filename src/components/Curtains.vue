@@ -26,6 +26,7 @@
                   type="text"
                   class="form-control"
                   placeholder="Room"
+                  ref="test"
                 />
               </div>
             </td>

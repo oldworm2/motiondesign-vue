@@ -9,6 +9,7 @@
       v-bind:colours="colours"
       v-bind:product="product"
       v-bind:selectedColourStyle="selectedColourStyle"
+      v-bind:addCurtain="addCurtain"
     />
     <Curtains 
       v-bind:curtains="product.curtains"
@@ -162,6 +163,9 @@ export default {
     addCurtain() {
       const curtain = {...this.curtain};
       this.product.curtains.push(curtain); 
+      this.$nextTick(() => {
+        this.$children[1].$refs.test[this.product.curtains.length-1].focus();
+      });
     },
     removeCurtain(index) {
       this.product.curtains.splice(index, 1);
