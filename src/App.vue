@@ -6,7 +6,7 @@
         Welcome, {{this.user}} <i class="fas fa-user"></i>
       </span>
     </nav>
-    <main class="p-4">
+    <main class="p-4 mb-5">
       <ProductView />
     </main>
     <footer class="footer">
@@ -51,59 +51,66 @@ export default {
   }
 
   .app .navbar{
-    padding-left:35px;
-    padding-right:35px;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 
   .app .table-area{
-    margin-left:0;
-    margin-right:0;
-    overflow-x:auto;
+    margin-left: 0;
+    margin-right: 0;
+    overflow-x: auto;
     overflow-y: hidden;
   }
   h1{
-    font-size:20px;
+    font-size: 20px;
     line-height: 24px;
   }
 
   .title{
     font-weight: bold;
   }
+
   h3.title{
     margin-top:30px;
   }
+
   .table th{
-    font-size:1.2em;
+    font-size: 1.2em;
   }
+
   .table td{
-    font-size:1.1em;
+    font-size: 1.1em;
   }
+
   .navbar-text{
     font-weight: bold; 
     font-size: 12pt;
   }
+
   .footer{
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    padding:10px;
+    padding: 10px;
     background: #eef9ee;
   }
+
   .motion_logo{
     position: absolute;
-    top:10px;
-    right:10px;
+    top: 10px;
+    right: 10px;
   }
+
   @media screen and (max-width:480px){
     small{
-      display:block;
-      text-align:center;
+      display: block;
+      text-align: center;
       margin:0 auto;
     }
     .motion_logo{
       position: static;
-      display:block;
+      display: block;
       margin:10px auto;
     }
   }
