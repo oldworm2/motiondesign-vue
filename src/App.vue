@@ -59,6 +59,7 @@ export default {
     margin-left:0;
     margin-right:0;
     overflow-x:auto;
+    overflow-y: hidden;
   }
   h1{
     font-size:20px;
