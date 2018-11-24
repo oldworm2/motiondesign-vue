@@ -164,7 +164,7 @@ export default {
       const curtain = {...this.curtain};
       this.product.curtains.push(curtain); 
       this.$nextTick(() => {
-        this.$children[1].$refs.test[this.product.curtains.length-1].focus();
+        this.$children[1].$refs.room[this.product.curtains.length-1].focus();
       });
     },
     removeCurtain(index) {
