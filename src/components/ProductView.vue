@@ -89,7 +89,7 @@ export default {
       if(!selectedColour){
         selectedColour = this.selectedColour;
       }
-      return this.dynamicColour(selectedColour);
+      return this.getColourStyle(selectedColour);
     },
   },
   methods: {
@@ -121,7 +121,7 @@ export default {
         this.colours = data.map((colour) =>{
           return {
             ...colour,
-            colourStyle: this.dynamicColour(colour)
+            colourStyle: this.getColourStyle(colour)
           }
         });
       }catch(e){
@@ -146,7 +146,7 @@ export default {
         this.openMessageBox('Error', e.message);
       } 
     },
-    dynamicColour(colour) {
+    getColourStyle(colour) {
       const color =  `rgb(${255 - colour.red}, 
         ${255 - colour.green}, 
         ${255 - colour.blue})`;
