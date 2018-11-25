@@ -185,7 +185,7 @@ export default {
         } 
         this.getData();
         this.openMessageBox('Success', 'Saved');
-        setInterval(this.closeMessageBox, 3000);
+        setTimeout(this.closeMessageBox, 2000);
       }catch(e){
         this.openMessageBox('Error', e.message);
       } 
